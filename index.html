@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DALL-E 4K Image Creator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="client.js" type="module"></script>
+    <div class="headings text-center">
+        <h1>
+            DALL-E 4K
+        </h1>
+        <p class="lead">
+            Create images using DALL-E 3 for free!
+        </p>
+    </div>
+
+    <div class="promptControls mx-4">
+        <input type="text" class="form-control" id="prompt" placeholder="Enter a prompt">
+        <div class="d-flex justify-content-center" id="btnControls">
+            <button type="button" class="btn btn-primary mx-3 my-3" id="generateBtn">Generate (natural)</button>
+            <button type="button" class="btn btn-danger mx-3 my-3" id="clearBtn">Clear</button>
+            <select style="max-width: 10%;" class="form-select mx-3 my-3" id="StylesSelect">
+                <option value="vivid">Vivid</option>
+                <option value="natural">Natural</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="imageContainer d-flex flex-column justify-content-center">
+        <!-- data goes here -->
+    </div>
+</body>
+</html>
