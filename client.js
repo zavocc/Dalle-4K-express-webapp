@@ -29,12 +29,14 @@ function disable_controls() {
     document.getElementById('generateBtn').setAttribute("disabled", "disabled");
     document.getElementById('clearBtn').setAttribute("disabled", "disabled");
     document.getElementById('prompt').setAttribute("disabled", "disabled");
+    document.getElementById('StylesSelect').setAttribute("disabled", "disabled");
 }
 
 function enable_controls() {
     document.getElementById('generateBtn').removeAttribute("disabled");
     document.getElementById('clearBtn').removeAttribute("disabled");
     document.getElementById('prompt').removeAttribute("disabled");
+    document.getElementById('StylesSelect').removeAttribute("disabled");
 }
 
 
@@ -66,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const responseElement = document.createElement('img');
 
         // Set response data
-        responseElement.alt = "Generated image";
+        responseElement.alt = prompt;
         responseElement.src = response;
         responseElement.width = 256;
         responseElement.height = 256;

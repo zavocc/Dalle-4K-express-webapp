@@ -10,7 +10,7 @@
 </head>
 <body>
     <script src="client.js" type="module"></script>
-    <div class="headings text-center">
+    <div class="headings text-center fixed-top mb-auto">
         <h1>
             DALL-E 4K
         </h1>
@@ -19,19 +19,19 @@
         </p>
     </div>
 
-    <div class="promptControls mx-4">
+    <div class="promptControls mx-4 fixed-bottom">
         <input type="text" class="form-control" id="prompt" placeholder="Enter a prompt">
         <div class="d-flex justify-content-center" id="btnControls">
             <button type="button" class="btn btn-primary mx-3 my-3" id="generateBtn">Generate</button>
             <button type="button" class="btn btn-danger mx-3 my-3" id="clearBtn">Clear</button>
-            <select style="max-width: 10%;" class="form-select mx-3 my-3" id="StylesSelect">
+            <select class="form-select mx-3 my-3 w-25" id="StylesSelect">
                 <option value="vivid">Vivid</option>
                 <option value="natural">Natural</option>
             </select>
         </div>
     </div>
 
-    <div class="imageContainer d-flex flex-column justify-content-center">
+    <div class="imageContainer d-flex flex-column justify-content-center overflow-y-auto">
         <!-- data goes here -->
     </div>
 </body>
