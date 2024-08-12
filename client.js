@@ -1,5 +1,5 @@
 // Fetch response from endpoint
-async function fetch_response(prompt) {
+async function fetch_response(prompt, style) {
     const url = 'http://localhost:15032/v2/generate';
 
     if (!prompt) {
@@ -8,6 +8,7 @@ async function fetch_response(prompt) {
 
     let completions_config = {
         prompt: prompt,
+        style: style || "vivid"
     }
 
     const response = await fetch(url, {
@@ -42,13 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // On click event
     document.getElementById('generateBtn').addEventListener('click', async () => {
         const prompt = document.getElementById('prompt').value;
+        // Style
+        const style = document.getElementById('StylesSelect').value;
 
         // Disable controls
         disable_controls();
         
         let response;
         try {
-            response = await fetch_response(prompt);
+            response = await fetch_response(prompt, style);
         }
         catch (error) {
             response = error.message;
